@@ -1,0 +1,34 @@
+{
+  "id": "n5eb-konoha-shops",
+  "title": "N5EB - Konoha Shops",
+  "description": "Player-accessible Konoha marketplace with secure one-click purchases, personal journal shortcuts, every priced equipment item from the N5EB and T7 compendiums, and 45 unique Naruto-inspired specialty items.",
+  "version": "2.1.2",
+  "authors": [
+    {
+      "name": "Nikola & Codex"
+    }
+  ],
+  "compatibility": {
+    "minimum": "13",
+    "verified": "14",
+    "maximum": "14"
+  },
+  "relationships": {
+    "systems": [
+      {
+        "id": "n5eb",
+        "type": "system",
+        "compatibility": {
+          "minimum": "3.1.1"
+        }
+      }
+    ]
+  },
+  "esmodules": [
+    "scripts/main.js"
+  ],
+  "styles": [
+    "styles/shop.css"
+  ],
+  "socket": true
+}

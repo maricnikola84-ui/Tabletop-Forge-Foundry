@@ -1,0 +1,58 @@
+{
+  "snapshotDate": "2026-10-01",
+  "validatedFor": {
+    "foundry": "14.367",
+    "system": "N5EB 3.1.1"
+  },
+  "archives": [
+    {
+      "moduleId": "n5eb-konoha-shops",
+      "version": "2.1.2",
+      "file": "N5EB_Konoha_Shops_v2.1.2_COMPLETE_Module.zip",
+      "sizeBytes": 18976,
+      "sha256": "3a71bbe50c65a85d9c267e18cbacf8b62ec12d03ff4008c9a9d3e1e3c1e07108",
+      "files": {
+        "n5eb-konoha-shops/module.json": "79083b5d9eb03344b106d966dc3c57ec5b997e2be9ae49ee68ea2e36c33f985b",
+        "n5eb-konoha-shops/README.md": "660bb1174992ceb1f8727e57eb89de95a3c6833f7f4875affb28e7eaf78312b6",
+        "n5eb-konoha-shops/scripts/main.js": "04ac1d179f1c1d03c012f8eac0195eed4831f6214605d353f3a05b42eb05deac",
+        "n5eb-konoha-shops/styles/shop.css": "b9c435c444816aee5e27c9766ea74778b173c963c6c34fd984d7058cde0d52b6"
+      }
+    },
+    {
+      "moduleId": "n5eb-gm-qol",
+      "version": "1.0.0",
+      "file": "N5EB_GM_QOL_v1.0.0_COMPLETE_Module.zip",
+      "sizeBytes": 7695,
+      "sha256": "d6f9d30a0f4ed6fcca084bffc85b7e32945e0168b1cc1f2207a3c95a9274b0e9",
+      "files": {
+        "n5eb-gm-qol/module.json": "5006af69c8687f70b60b74c0855b4fdbf70412f03942fae55a52a9dff457449d",
+        "n5eb-gm-qol/README.md": "6c41c24066ea67fec60437dd9670bc166f57f7ac9f46d3dc5e0e083bb152b27c",
+        "n5eb-gm-qol/scripts/main.js": "cf697b7cee314f0e647df38a579eec5446c5d4425a9ee109aae9643d8ead1760"
+      }
+    },
+    {
+      "moduleId": "n5eb-jutsu-automation",
+      "version": "4.8.2",
+      "displayBuild": "N5EB 3.1.1 All-Class Automation v4.8.2 — Eight Gates + Charlie Stage 3",
+      "file": "N5EB-All-Class-Automation-v4.8.2-Eight-Gates-FINAL.zip",
+      "sizeBytes": 1152082,
+      "sha256": "a75df489712768675c4de18abf414e39fdda3f444d1aa52f714d4289c291024e",
+      "keyFiles": {
+        "module.json": "428205f45413504fe2ab63b3313c11712238be324dc336ede9cd2aec34ed447d",
+        "scripts/main.mjs": "8aae5237faeca19fd685c3759b90c6af170823957c70abe43db40dcf295a173a",
+        "scripts/charlie-complete.mjs": "6446a7e1dc0a4799bb23a99ed8ebc40357bac5ed9de004890037d0648d4595ca",
+        "scripts/feature-engine-v47.mjs": "32e29d9a8a98c83cc18f91f462e2f16fa475f427fbc2a3189979e81d336d6892",
+        "data/feature-registry.json": "0e4df6dfe00f3fa9a4ad17a9026709e71c6b1ead23497d8dbe66457c2f2e95ff",
+        "data/jutsu-workflow-registry.json": "93235102cf3e6579df4d1465543db35c55d3c12bc2ef29968803c519c0d29885",
+        "VALIDATION_REPORT_v4.8.2.txt": "b4b627fee8a2b5161d7f29351f44b5f2410db7e269a841b33b59f3bc381d9772",
+        "BUILD_REPORT.json": "7e77eb30ffc04cf233a086052b1a4fd66a343515897543fb0231401c8a21a6c0"
+      }
+    }
+  ],
+  "validation": {
+    "zipIntegrity": "passed",
+    "jsonParse": "passed for all JSON files",
+    "javascriptSyntax": "passed for Konoha Shops main.js, GM QoL main.js, and all three All-Class Automation .mjs files",
+    "networkReview": "All-Class Automation fetch() calls resolve only its local data registries under modules/n5eb-jutsu-automation/data/."
+  }
+}

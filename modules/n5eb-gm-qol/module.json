@@ -1,0 +1,29 @@
+{
+  "id": "n5eb-gm-qol",
+  "title": "N5EB GM Quality of Life",
+  "description": "Safe GM tools for N5EB character QA, session navigation, and rest/resource handling.",
+  "version": "1.0.0",
+  "authors": [
+    {
+      "name": "Nikola / Codex"
+    }
+  ],
+  "compatibility": {
+    "minimum": "13.347",
+    "verified": "14"
+  },
+  "relationships": {
+    "systems": [
+      {
+        "id": "n5eb",
+        "type": "system",
+        "compatibility": {
+          "minimum": "3.1.1"
+        }
+      }
+    ]
+  },
+  "esmodules": [
+    "scripts/main.js"
+  ]
+}

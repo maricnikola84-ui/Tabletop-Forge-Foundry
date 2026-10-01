@@ -1,0 +1,35 @@
+{
+  "id": "n5eb-jutsu-automation",
+  "title": "N5EB 3.1.1 All-Class Automation v4.8.2 — Eight Gates + Charlie Stage 3",
+  "description": "N5EB 3.1.1 all-class automation with staged Eight Inner Gates, cumulative bonuses, Fatigue and Hit Dice handling, casting restrictions, Shimon safety, Charlie Twisted Cloak Stage 3, B/P/S Haki DR 25, direct 2:1 Twisted Chakra costs, enemy Jutsu automation, and Foundry 14 effect durations.",
+  "version": "4.8.2",
+  "compatibility": {
+    "minimum": "13.347",
+    "verified": "14"
+  },
+  "authors": [
+    {
+      "name": "Nikola / ChatGPT"
+    }
+  ],
+  "esmodules": [
+    "scripts/main.mjs",
+    "scripts/charlie-complete.mjs",
+    "scripts/feature-engine-v47.mjs"
+  ],
+  "relationships": {
+    "systems": [
+      {
+        "id": "n5eb",
+        "type": "system",
+        "compatibility": {
+          "minimum": "3.1.1"
+        }
+      }
+    ]
+  },
+  "socket": true,
+  "styles": [
+    "styles/workflow.css"
+  ]
+}

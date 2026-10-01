@@ -16,7 +16,7 @@ The official 3.1.1 release ZIP has SHA-256:
 
 The upstream system is MIT-licensed; its own license and attribution remain authoritative.
 
-### Clone with the system source
+### Clone with pinned sources
 
 ```bash
 git clone --recurse-submodules https://github.com/maricnikola84-ui/Tabletop-Forge-Foundry.git
@@ -35,17 +35,41 @@ git submodule update --init --recursive
 ## Repository areas
 
 - `vendor/n5eb-3.1.1/` — exact upstream N5EB 3.1.1 source, pinned by submodule.
+- `vendor/modules/` — exact source pins for current GitHub-hosted third-party modules.
+- `config/` — machine-readable current world/module snapshots.
 - `docs/` — durable Foundry / Forge / N5EB implementation knowledge learned through the project.
-- `modules/` — custom modules and automation source.
+- `modules/` — custom modules and automation source/current module identities.
 - `macros/` — reusable GM / repair / audit macros.
 - `actors/` — project-authored Actor JSON and conversion examples only.
 - `world-tools/` — import, cleanup, migration, and diagnostics tooling.
 - `LICENSES/` — third-party license notices relevant to pinned/derived source.
 
+## Current Naruto world — 2026-10-01
+
+Core: **Foundry 14.367 + N5EB 3.1.1**.
+
+Current enabled modules:
+
+1. Dice So Nice! **6.2.9**
+2. Dice Tray **4.0.3**
+3. N5EB - Konoha Shops **2.1.2**
+4. **N5EB 3.1.1 All-Class Automation v4.8.2 — Eight Gates + Charlie Stage 3**
+5. N5EB GM Quality of Life **1.0.0**
+6. N5EB Typed Damage & Colors **1.0.0**
+7. Polyglot **2.9.2**
+8. Sequencer **4.2.3**
+9. The Forge **1.14.10**
+10. Tokenizer 2 **1.2.5**
+
+The exact module IDs and checked upstream commits are stored in `config/current-naruto-world-modules.json`. The readable explanation is `docs/CURRENT_NARUTO_WORLD_STACK.md`.
+
+The current All-Class Automation **4.8.2** is the sole automation authority. Older Jutsu Automation, Full Automation, separate Save & Hit Resolver, and earlier All-Class v4.x builds must remain disabled when 4.8.2 is active.
+
 ## Key documentation
 
 Start here:
 
+- `docs/CURRENT_NARUTO_WORLD_STACK.md` — actual current enabled module stack.
 - `docs/N5EB_3.1.1_SOURCE_PIN.md` — exact upstream release/version/checksum.
 - `docs/N5EB_3.1.1_DEVELOPER_REFERENCE.md` — schema/hooks/activity notes learned from 3.1.1.
 - `docs/AUTOMATION_RULES.md` — source integrity, hit/save gating, target linking, prompts, rollback.
@@ -55,19 +79,8 @@ Start here:
 - `docs/UI_RULES.md` — DialogV2 / responsive UI lessons.
 - `docs/KNOWN_FAILURE_MODES.md` — recurring bugs and their prevention.
 - `docs/VALIDATION_CHECKLIST.md` — static QA versus real Foundry/Forge testing.
-- `docs/PROJECT_STACK.md` — recommended module responsibility boundaries.
-
-## Current module stack philosophy
-
-For an N5EB world, prefer one authoritative module for each job rather than overlapping automation:
-
-1. N5EB 3.1.1 system.
-2. One current All-Class/Jutsu automation module.
-3. Typed Damage & Colors when used by the campaign.
-4. Enemy Forge for runtime adversary generation.
-5. Tobirama's Legacy or other campaign modules only when their responsibilities do not duplicate the automation layer.
-
-Old automation modules that overlap the current stack should stay disabled.
+- `docs/PROJECT_STACK.md` — current responsibility boundaries.
+- `docs/MODULE_CATALOG.md` — current and historical project module lines.
 
 ## Safety principles
 

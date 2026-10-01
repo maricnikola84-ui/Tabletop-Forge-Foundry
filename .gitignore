@@ -1,0 +1,42 @@
+# Secrets / local settings
+.env
+.env.*
+*.key
+*.pem
+secrets/
+
+# Dependencies / build caches
+node_modules/
+.cache/
+dist/
+tmp/
+temp/
+*.log
+
+# Large packaged artifacts and exports
+*.zip
+*.7z
+*.rar
+*.part00
+*.part01
+*.part02
+*.part03
+*.part04
+*.part05
+
+# Foundry local runtime data - never commit an entire live install
+Data/systems/
+Data/worlds/
+Data/modules/
+Config/
+Logs/
+
+# World exports/backups
+ForgeVTT-export-*.zip
+world-backup-*
+
+# OS/editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/

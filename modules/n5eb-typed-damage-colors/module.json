@@ -1,0 +1,32 @@
+{
+  "id": "n5eb-typed-damage-colors",
+  "title": "N5EB Typed Damage & Colors",
+  "description": "N5EB 3.1.1 damage-type guard and visualizer. Keeps Fire, Psychic, Lightning, Necrotic and other damage components explicitly typed for native resistance/immunity/vulnerability handling and displays each component with N5EB's own damage-type color.",
+  "version": "1.0.0",
+  "compatibility": {
+    "minimum": "13.347",
+    "verified": "14"
+  },
+  "authors": [
+    {
+      "name": "Nikola / ChatGPT"
+    }
+  ],
+  "esmodules": [
+    "scripts/main.mjs"
+  ],
+  "styles": [
+    "styles/typed-damage.css"
+  ],
+  "relationships": {
+    "systems": [
+      {
+        "id": "n5eb",
+        "type": "system",
+        "compatibility": {
+          "minimum": "3.1.1"
+        }
+      }
+    ]
+  }
+}

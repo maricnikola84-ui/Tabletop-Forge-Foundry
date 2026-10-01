@@ -1,3 +1,15 @@
 [submodule "vendor/n5eb-3.1.1"]
 	path = vendor/n5eb-3.1.1
 	url = https://github.com/ImBenni/n5eb.git
+[submodule "vendor/modules/dice-tray-4.0.3"]
+	path = vendor/modules/dice-tray-4.0.3
+	url = https://github.com/mclemente/fvtt-dice-tray.git
+[submodule "vendor/modules/polyglot-2.9.2"]
+	path = vendor/modules/polyglot-2.9.2
+	url = https://github.com/mclemente/fvtt-module-polyglot.git
+[submodule "vendor/modules/sequencer-4.2.3"]
+	path = vendor/modules/sequencer-4.2.3
+	url = https://github.com/fantasycalendar/FoundryVTT-Sequencer.git
+[submodule "vendor/modules/forge-vtt-1.14.10"]
+	path = vendor/modules/forge-vtt-1.14.10
+	url = https://github.com/ForgeVTT/fvtt-module-forge-vtt.git

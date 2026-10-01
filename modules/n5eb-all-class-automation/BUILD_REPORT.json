@@ -1,0 +1,13 @@
+{
+  "module": "N5EB 3.1.1 All-Class Automation",
+  "version": "4.8.2",
+  "focus": "Eight Inner Gates staged runtime automation, Charlie Cloak Stage 3, B/P/S Haki DR 25, and retained v4.8.x repairs",
+  "new_runtime_rule_kinds": [
+    "tempHP",
+    "abilityCheckBonus"
+  ],
+  "source_integrity": true,
+  "manual_rule_flag": "flags.n5eb-jutsu-automation.rules",
+  "fixture": "Kurama Style: Percept Mind",
+  "validation_report": "VALIDATION_REPORT_v4.8.2.txt"
+}

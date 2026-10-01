@@ -8,11 +8,36 @@
 - System target: **N5EB 3.1.1**
 - Role: authoritative automation layer for the current Naruto world.
 
-## Source status
+## Recovered source package
 
-The exact **4.8.2** package/source has not yet been recovered into the working Library. Older v4.7.x packages and documentation are available as development history, but they are **not** copied here and relabeled as 4.8.2.
+The exact current package was recovered on 2026-10-01:
 
-When the live 4.8.2 ZIP/source is exported, place the real source in this directory and validate it against `vendor/n5eb-3.1.1` before changing behavior.
+`N5EB-All-Class-Automation-v4.8.2-Eight-Gates-FINAL.zip`
+
+SHA-256:
+
+`a75df489712768675c4de18abf414e39fdda3f444d1aa52f714d4289c291024e`
+
+The archive contains 26 files, including the three runtime modules, the generated N5EB 3.1.1 feature and Jutsu-workflow registries, support macros, Charlie audit data, Source Integrity notes, and validation reports through v4.8.2. Per-file hashes are recorded in `../../config/current-project-module-source-archives.json`.
+
+Static validation against the supplied archive passed: all JSON parses, all three `.mjs` files pass Node syntax validation, and the only `fetch()` calls load the module's own local registry files.
+
+## v4.8.2 focus
+
+The recovered build confirms:
+
+- staged Eight Inner Gates from Kaimon through Shimon;
+- cumulative STR, CON, speed and AC changes;
+- one-minute gate state with duration refresh on advancement;
+- Ninjutsu/Genjutsu restrictions while a gate is active;
+- Kyumon/Keimon optional Hit Dice recovery and repeat-use Hit Die locking;
+- accumulated Fatigue and source-rate recovery;
+- explicit Shimon warning with Actor preservation and HP set to 0 when Shimon ends;
+- Charlie Twisted Cloak Stage 3;
+- B/P/S Haki DR 25;
+- direct 2:1 Twisted Chakra cost handling;
+- retained enemy-Jutsu and Foundry 14 duration repairs;
+- no rewriting of original Eight Gates feat documents.
 
 ## Non-negotiable implementation rules
 
@@ -26,4 +51,4 @@ When the live 4.8.2 ZIP/source is exported, place the real source in this direct
 - Audit, resync and cleanup paths remain available.
 - Typed Damage & Colors remains a separate companion module.
 
-See `docs/AUTOMATION_RULES.md` and `docs/N5EB_3.1.1_DEVELOPER_REFERENCE.md` for the durable rule set.
+See `../../docs/AUTOMATION_RULES.md`, `../../docs/N5EB_3.1.1_DEVELOPER_REFERENCE.md`, and `../../config/current-project-module-source-archives.json`.

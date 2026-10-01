@@ -1,0 +1,91 @@
+{
+  "snapshotDate": "2026-10-01",
+  "world": "Naruto / N5EB",
+  "foundry": "14.367",
+  "system": {
+    "id": "n5eb",
+    "version": "3.1.1"
+  },
+  "modules": [
+    {
+      "id": "dice-so-nice",
+      "title": "Dice So Nice!",
+      "version": "6.2.9",
+      "enabled": true,
+      "ownership": "third-party"
+    },
+    {
+      "id": "dice-calculator",
+      "title": "Dice Tray",
+      "version": "4.0.3",
+      "enabled": true,
+      "ownership": "third-party",
+      "upstream": "https://github.com/mclemente/fvtt-dice-tray",
+      "upstreamCommit": "3b846ce68471522ba684d9c1ead76e2fc615d21d"
+    },
+    {
+      "id": "n5eb-konoha-shops",
+      "title": "N5EB - Konoha Shops",
+      "version": "2.1.2",
+      "enabled": true,
+      "ownership": "project"
+    },
+    {
+      "id": "n5eb-jutsu-automation",
+      "title": "N5EB 3.1.1 All-Class Automation v4.8.2 — Eight Gates + Charlie Stage 3",
+      "version": "4.8.2",
+      "enabled": true,
+      "ownership": "project",
+      "role": "authoritative N5EB automation layer"
+    },
+    {
+      "id": "n5eb-gm-qol",
+      "title": "N5EB GM Quality of Life",
+      "version": "1.0.0",
+      "enabled": true,
+      "ownership": "project"
+    },
+    {
+      "id": "n5eb-typed-damage-colors",
+      "title": "N5EB Typed Damage & Colors",
+      "version": "1.0.0",
+      "enabled": true,
+      "ownership": "project"
+    },
+    {
+      "id": "polyglot",
+      "title": "Polyglot",
+      "version": "2.9.2",
+      "enabled": true,
+      "ownership": "third-party",
+      "upstream": "https://github.com/mclemente/fvtt-module-polyglot",
+      "upstreamCommit": "0702874f1c57238bc635d78045b5c791924262f6"
+    },
+    {
+      "id": "sequencer",
+      "title": "Sequencer",
+      "version": "4.2.3",
+      "enabled": true,
+      "ownership": "third-party",
+      "upstream": "https://github.com/fantasycalendar/FoundryVTT-Sequencer",
+      "upstreamCommit": "09a1c5b5689a8a049057927562586d668c100d30"
+    },
+    {
+      "id": "forge-vtt",
+      "title": "The Forge",
+      "version": "1.14.10",
+      "enabled": true,
+      "ownership": "third-party-host-integration",
+      "upstream": "https://github.com/ForgeVTT/fvtt-module-forge-vtt",
+      "upstreamCommit": "1dbafc70eba05dd8600a0af5ae2842cf4ffa14d9",
+      "note": "Automatically supplied/enabled by The Forge hosting environment."
+    },
+    {
+      "id": "tokenizer-2",
+      "title": "Tokenizer 2",
+      "version": "1.2.5",
+      "enabled": true,
+      "ownership": "third-party"
+    }
+  ]
+}

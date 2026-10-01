@@ -1,16 +1,36 @@
 # Tabletop Forge / Foundry
 
-Private-workbench-style repository for Foundry VTT / The Forge tools, modules, automation, conversion notes, and durable implementation rules.
+Workbench repository for Foundry VTT / The Forge tools, modules, automation, conversion notes, and durable implementation rules learned through our campaigns and development work.
 
 ## Primary target: N5EB / Naruto 5e 3.1.1
 
 This repository is built first and foremost around **N5EB 3.1.1** on Foundry VTT / The Forge.
 
-The exact upstream N5EB 3.1.1 source is pinned as a Git submodule at `vendor/n5eb-3.1.1` to the official `ImBenni/n5eb` release commit for **release-3.1.1**. The upstream system is MIT-licensed; its own license and attribution remain authoritative.
+The exact upstream N5EB 3.1.1 source is pinned as a Git submodule at `vendor/n5eb-3.1.1` to the official `ImBenni/n5eb` release commit for **release-3.1.1**:
+
+`32a64e7b36db7d6d6e63bc0f894cb0df475ea783`
+
+The official 3.1.1 release ZIP has SHA-256:
+
+`601159db6151963354bed55277b0bb8130f6d02fff768becc35559545b45a3a0`
+
+The upstream system is MIT-licensed; its own license and attribution remain authoritative.
+
+### Clone with the system source
+
+```bash
+git clone --recurse-submodules https://github.com/maricnikola84-ui/Tabletop-Forge-Foundry.git
+```
+
+For an existing clone:
+
+```bash
+git submodule update --init --recursive
+```
 
 ### Core rule
 
-**Use the installed N5EB 3.1.1 system and compendiums as the source of truth.** Do not invent feat, clan, class, jutsu, item, activity, condition, or advancement data when the real N5EB document exists.
+**Use the installed/pinned N5EB 3.1.1 system and compendiums as the source of truth.** Do not invent feat, clan, class, Jutsu, item, activity, condition, advancement, rank, or Chakra-cost data when the real N5EB document exists.
 
 ## Repository areas
 
@@ -20,6 +40,22 @@ The exact upstream N5EB 3.1.1 source is pinned as a Git submodule at `vendor/n5e
 - `macros/` — reusable GM / repair / audit macros.
 - `actors/` — project-authored Actor JSON and conversion examples only.
 - `world-tools/` — import, cleanup, migration, and diagnostics tooling.
+- `LICENSES/` — third-party license notices relevant to pinned/derived source.
+
+## Key documentation
+
+Start here:
+
+- `docs/N5EB_3.1.1_SOURCE_PIN.md` — exact upstream release/version/checksum.
+- `docs/N5EB_3.1.1_DEVELOPER_REFERENCE.md` — schema/hooks/activity notes learned from 3.1.1.
+- `docs/AUTOMATION_RULES.md` — source integrity, hit/save gating, target linking, prompts, rollback.
+- `docs/ACTOR_AND_COMPENDIUM_RULES.md` — how to build/import legal N5EB actors.
+- `docs/ENEMY_FORGE_RULES.md` — adversary and encounter generation rules.
+- `docs/FORGE_DEPLOYMENT_RULES.md` — Forge-specific deployment/import rules.
+- `docs/UI_RULES.md` — DialogV2 / responsive UI lessons.
+- `docs/KNOWN_FAILURE_MODES.md` — recurring bugs and their prevention.
+- `docs/VALIDATION_CHECKLIST.md` — static QA versus real Foundry/Forge testing.
+- `docs/PROJECT_STACK.md` — recommended module responsibility boundaries.
 
 ## Current module stack philosophy
 
@@ -41,9 +77,11 @@ Old automation modules that overlap the current stack should stay disabled.
 - Optional/resource-spending features must prompt instead of silently spending resources.
 - Multiple-choice native effects should never all auto-apply by default.
 - Offensive conditions require the actual trigger: hit, failed save, critical failure, or other explicit rule condition.
+- Target-specific effects must stay linked to the correct target and never leak across AoE victims.
 - Generated effects must be identifiable and removable without touching manually-authored or upstream data.
 - Every automation feature should have audit, resync, and cleanup/rollback paths.
+- Static validation and live Forge/Foundry click-through are separate validation states.
 
 ## Forge note
 
-The Forge is not a normal local filesystem. Do not design workflows that require manually editing `Data/systems/n5eb` on the hosted instance. Modules should resolve installed compendiums/assets at runtime or package their own project-authored assets.
+The Forge is not a normal local filesystem. Do not design workflows that require manually editing `Data/systems/n5eb` on the hosted instance. Modules should resolve installed compendiums/assets at runtime or package their own project-authored assets. Use Forge's module/import workflow and Import Wizard for deployment/repair work.

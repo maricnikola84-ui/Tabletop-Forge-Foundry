@@ -22,6 +22,10 @@ The archive contains 26 files, including the three runtime modules, the generate
 
 Static validation against the supplied archive passed: all JSON parses, all three `.mjs` files pass Node syntax validation, and the only `fetch()` calls load the module's own local registry files.
 
+### Package README note
+
+The ZIP's bundled `README.md` still begins with the older **v4.8.1 — Charlie Effect Race Hotfix** heading, then contains the v4.8.2 Eight Inner Gates section later in the file. This is a documentation-heading carry-over, not a package-version mismatch: `module.json`, `BUILD_REPORT.json`, the ZIP filename, and `VALIDATION_REPORT_v4.8.2.txt` all identify the recovered build as **4.8.2**. For deployment/version checks, `module.json` is authoritative.
+
 ## v4.8.2 focus
 
 The recovered build confirms:

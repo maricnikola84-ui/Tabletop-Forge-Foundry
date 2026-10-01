@@ -22,26 +22,36 @@ This file is the **authoritative current enabled-module snapshot** for the Narut
 | `forge-vtt` | The Forge | **1.14.10** | Forge host integration; supplied by hosting environment |
 | `tokenizer-2` | Tokenizer 2 | **1.2.5** | token image editor |
 
-The machine-readable copy is `config/current-naruto-world-modules.json`.
+The machine-readable enabled-module copy is `config/current-naruto-world-modules.json`.
+
+## Recovered project source archives
+
+The exact current ZIPs for the three previously missing project modules were supplied and validated on **2026-10-01**. Their package SHA-256 hashes are now locked in `config/current-project-module-source-archives.json`:
+
+- `n5eb-konoha-shops` 2.1.2 — `3a71bbe50c65a85d9c267e18cbacf8b62ec12d03ff4008c9a9d3e1e3c1e07108`
+- `n5eb-gm-qol` 1.0.0 — `d6f9d30a0f4ed6fcca084bffc85b7e32945e0168b1cc1f2207a3c95a9274b0e9`
+- `n5eb-jutsu-automation` 4.8.2 — `a75df489712768675c4de18abf414e39fdda3f444d1aa52f714d4289c291024e`
+
+All JSON files in the supplied archives parsed successfully. JavaScript syntax validation passed for Konoha Shops, GM QoL, and all three All-Class Automation modules. The only `fetch()` use found in All-Class Automation loads its own local `data/feature-registry.json` and `data/jutsu-workflow-registry.json` files.
 
 ## Checked third-party pins
 
-The versions shown in the current world are real published module versions. Where the source is on GitHub, the exact commits corresponding to the running version have been checked:
+Where the source is on GitHub, the exact commits corresponding to the running version are pinned:
 
 - Dice Tray 4.0.3 — `mclemente/fvtt-dice-tray` — `3b846ce68471522ba684d9c1ead76e2fc615d21d`
 - Polyglot 2.9.2 — `mclemente/fvtt-module-polyglot` — `0702874f1c57238bc635d78045b5c791924262f6`
 - Sequencer 4.2.3 — `fantasycalendar/FoundryVTT-Sequencer` — `09a1c5b5689a8a049057927562586d668c100d30`
 - The Forge 1.14.10 — `ForgeVTT/fvtt-module-forge-vtt` — `1dbafc70eba05dd8600a0af5ae2842cf4ffa14d9`
-- Dice So Nice! 6.2.9 is the published GitLab tag `6.2.9` (official source is GitLab rather than GitHub).
-- Tokenizer 2 1.2.5 is a published Foundry VTT package build from MrPrimate's distribution infrastructure.
+- Dice So Nice! 6.2.9 is the published GitLab tag `6.2.9`.
+- Tokenizer 2 1.2.5 is a published Foundry package build from MrPrimate's distribution infrastructure.
 
 ## Project module identity
 
-The four project modules currently in actual play are:
-
 ### `n5eb-jutsu-automation` — 4.8.2
 
-This is the current automation authority. Older v2/v3/v4.x builds are historical and must not be enabled beside it. The current display title explicitly identifies the **Eight Gates + Charlie Stage 3** build.
+This is the current automation authority. Older v2/v3/v4.x builds are historical and must not be enabled beside it. The exact recovered manifest confirms the display title **N5EB 3.1.1 All-Class Automation v4.8.2 — Eight Gates + Charlie Stage 3**.
+
+The recovered build includes staged Eight Inner Gates runtime automation, cumulative gate bonuses, Fatigue and Hit Dice handling, Ninjutsu/Genjutsu restrictions while gated, Shimon safety, Charlie Twisted Cloak Stage 3, B/P/S Haki DR 25, direct 2:1 Twisted Chakra routing, enemy-Jutsu automation, and Foundry 14 effect-duration handling.
 
 All durable automation rules in this repository still apply: native N5EB activities/effects first, no invented source mechanics, result-gated hostile conditions, per-target state, reversible generated effects, player prompts for optional resource spending, and no duplicate application of sheet-authored values.
 
@@ -51,11 +61,11 @@ Current source is preserved in `modules/n5eb-typed-damage-colors/`. It remains s
 
 ### `n5eb-konoha-shops` — 2.1.2
 
-This is part of the current live world stack. Its exact source archive has not yet been recovered into the working Library, so this repository records its current identity/version rather than fabricating source files.
+The exact current package has now been recovered and validated. Its manifest confirms the player-accessible Konoha marketplace, GM-validated socket purchases, official priced N5EB/T7 catalog support, and the 2.1.2 player-purchase permission fix.
 
 ### `n5eb-gm-qol` — 1.0.0
 
-This is part of the current live world stack. Its exact source archive has not yet been recovered into the working Library, so this repository records its current identity/version rather than fabricating source files.
+The exact current package has now been recovered and validated. It contains the Character QA audit, Session Dashboard, and Rest & Resource Assistant and is intentionally a GM utility layer rather than a second automation engine.
 
 ## Current-stack rule
 

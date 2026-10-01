@@ -1,0 +1,19 @@
+N5EB 3.1.1 All-Class Automation v4.8.2
+Eight Inner Gates validation report
+
+Implemented:
+- Source feat identifiers recognized: 8-inner-gates-seimon, 8-inner-gates-keimon, 8-inner-gates-shimon.
+- Ordered Kaimon -> Shimon progression.
+- Cumulative STR, CON, speed, AC, extra-Action reminders, and Shimon movement multiplier.
+- One-minute runtime Active Effect with duration refresh on advancement.
+- Ninjutsu/Genjutsu casting restriction while any gate is active.
+- Kyumon/Keimon optional Hit Dice healing and once-per-Short-Rest tracking.
+- Repeat-use two-Hit-Die cost with locked dice preserved until Full Rest.
+- Accumulated Fatigue on close/expiry and source-rate recovery using world time.
+- Explicit Shimon death warning; Actor retained and HP set to zero when the gate ends.
+- Original feat documents are not rewritten.
+
+Static validation:
+- main.mjs passes Node JavaScript syntax validation.
+- module.json parses as JSON and retains version 4.8.2.
+- BUILD_REPORT.json parses as JSON.
